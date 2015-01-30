@@ -28,7 +28,7 @@ angular.module('core').controller('PruebaController', ['$scope',function($scope)
                     console.log('error: '+v2);
                 });
         }else{
-            console.log('otra vaina.......');
+            console.log('estas en un browser.......');
         }
     }
 
@@ -39,10 +39,10 @@ angular.module('core').controller('PruebaController', ['$scope',function($scope)
         if(window.cordova){
             printer.open(function(success){
                     var v1=success;
-                    console.log('success: '+v1);
+                    alert('success: '+v1);
                 },function(error){
                     var v2=error;
-                    console.log('error: '+v2);
+                    alert('error: '+v2);
                 },'XXXXJ134200170');
         }else{
             console.log('otra vaina.......');
@@ -53,12 +53,12 @@ angular.module('core').controller('PruebaController', ['$scope',function($scope)
         console.log('imprimir.....'+$scope.mensaje);
         if(window.cordova){
             printer.print(function(success){
-                console.log('success: '+success);
+                alert('success: '+success);
             },function(error){
-                console.log('error: '+error);
+                alert('error: '+error);
             },txt);
         }else{
-            console.log('otra vaina.......');
+            console.log('estas en un browser.......');
         }
     }
 
@@ -66,16 +66,16 @@ angular.module('core').controller('PruebaController', ['$scope',function($scope)
         console.log('cerrar....');
         if(window.cordova){
             printer.close(function(success){
-                console.log('success: '+success);
+                alert('success: '+success);
             },function(error){
-                console.log('error: '+error);
+                alert('error: '+error);
             });
         }
     }
 
     function cambiarSaltosDeLinea(texto){
         var newText = texto.replace(/(?:\\[n]|[\n]+)+/g,'\r\n');
-        alert('Va a imprimir: '+newText);
+        //alert('Va a imprimir: '+newText);
         return newText;
     }
 
