@@ -40,3 +40,4 @@ cordova run android
 ```
 
 En para este ejemplo se conectó al dispositivo movil una impresora zebra iMz320.
+El proyecto fue creado con yeoman, mediante el generador [yo angularjs-cordova](https://www.npmjs.com/package/generator-angularjs-cordova)
