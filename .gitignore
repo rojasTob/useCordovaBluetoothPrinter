@@ -1,0 +1,15 @@
+.DS_Store
+*.log
+node_modules/
+/dist/
+.tmp
+.sass-cache
+/app/lib
+.idea/
+/docs/
+
+##########Platforms##########
+
+
+##########iOS##########
+platforms/ios/cordova/console.log
