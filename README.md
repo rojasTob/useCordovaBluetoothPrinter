@@ -2,48 +2,24 @@
 
 Ejemplo para usar el plugin org.apache.cordova.sipkita BluetoothPrinter  
 
-### Pasos
 
-Crear el proyecto cordova - angularjs mediante yeoman (comando __yo__)
+### Ejecutar la aplicacion:
 
-```
-$ npm install -g yo
-```
+Primero installamos dependencias de grunt y bower:
 
 ```
-npm install -g generator-angularjs-cordova
+npm install
 ```
 
-Creamos la carpeta testapp e ingresamos. Luego ejecutamos el comando __yo angular-cordova__ para inicializar el proyecto, tendremos una serie de pasos para la creación del proyecto.
-
 ```
-mkdir testapp && cd testapp
-yo angularjs-cordova
+bower install
 ```
 
-Una vez completada la ejecución del comando tenemos lista la aplicación cordova-angularjs. Podemos ejecutar los siguientes comandos:
-
-Para ejecutar la aplicación en el browser:
+Agregamos la plataforma para android:
 
 ```
-grunt serve
+cordova platform add android
 ```
-
-Para generar una version de la aplicacion:
-
-```
-grunt build
-```
-
-### Crear rutas
-
-Para generar rutas en el proyecto utilizamos el comando:
-
-```
-cordova angularjs-cordova:angular-route nombreRuta
-```
-
-### Instalar el plugin
 
 Para instalar el plugin [Cordova Bluetooth Printer](https://github.com/eddysby2000/Cordova-Bluetooth-Printer-Plugin.git):
 
@@ -51,4 +27,16 @@ Para instalar el plugin [Cordova Bluetooth Printer](https://github.com/eddysby20
 cordova plugin add https://github.com/eddysby2000/Cordova-Bluetooth-Printer-Plugin.git
 ```
 
-En para este ejemplo se usó una impresora zebra iMz320.
+Para generar un apk:
+
+```
+cordova build
+```
+
+Para ejecutar en un emulador:
+
+```
+cordova run android
+```
+
+En para este ejemplo se conectó al dispositivo movil una impresora zebra iMz320.
