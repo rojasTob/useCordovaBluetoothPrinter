@@ -33,6 +33,7 @@ angular.module('core').controller('PruebaController', ['$scope',function($scope)
     }
 
     function openBt(){
+        //Para este ejemplo el nombre de la impresora es XXXXJ134200170
         var msj=$scope.mensaje;
         console.log('openBt.......:'+msj);
         if(window.cordova){
