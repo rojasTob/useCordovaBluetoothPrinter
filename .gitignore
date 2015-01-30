@@ -7,7 +7,7 @@ node_modules/
 /app/lib
 .idea/
 /docs/
-
+/www
 ##########Platforms##########
 /platforms
 
