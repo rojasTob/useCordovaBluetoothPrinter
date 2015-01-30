@@ -8,7 +8,7 @@
 */
 angular.module('core').controller('PruebaController', ['$scope',function($scope) {
 
-    $scope.mensaje='linea1\r\nlinea2\r\nlinea3\r\nlinea4';
+    $scope.mensaje='linea1\nlinea2\nlinea3\nlinea4';
 
     $scope.initControlador= function(){
         console.log('inicializado .....');
@@ -74,7 +74,7 @@ angular.module('core').controller('PruebaController', ['$scope',function($scope)
 
     function cambiarSaltosDeLinea(texto){
         var newText = texto.replace(/(?:\\[n]|[\n]+)+/g,'\r\n');
-        alert(newText);
+        alert('Va a imprimir: '+newText);
         return newText;
     }
 
@@ -84,20 +84,6 @@ angular.module('core').controller('PruebaController', ['$scope',function($scope)
         imprimir(txt);
         closeBt();
         //alert($scope.mensaje);
-    }
-
-    $scope.verDisponibilidadBT=function(){
-        console.log('verDisponibilidadBT.......');
-        if(window.cordova){
-            console.log('Estas en cordova.......');
-            bluetoothSerial.available(function(success){
-                console.log('success....');
-            }, function(failure){
-                console.log('failure....');
-            });
-        }else{
-            console.log('otra vaina.......');
-        }
     }
 
 }]);
